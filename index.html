@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SHRI RAM METAL CHALLAN BOOK</title>
+    <!-----Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- CSS file----- -->
+    <link rel="stylesheet" media="print" href="shri.css">
+
+    <!------css-->
+    <link rel="stylesheet" href="metal.css">
+
+    <!--------------JQuery file-->
+    <script src="https://code.jquery.com/jquery-3.6.2.slim.js"
+        integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>
+
+    <!-- javascript file ------->
+    <script src="shri.js"></script>
+</head>
+
+<body>
+    <div id="container" value="" class="container ">
+        <hr>
+        <div class="card">
+            <div class="card-header text-center">
+                <h4>SHRI RAM METAL</h4>
+                <hr>
+                <table>
+                    <tr>
+                        <th class="add" class="form-control">P-47 SHADE NO-1, VISHVAKARMA INST. ESTATE, CHITRA GIDC</th>
+                    </tr>
+                </table>
+                <hr>
+                <table>
+                    <tr>
+                        <th class="add" class="form-control">BHAVNAGAR, 364004, 9974319060</th>
+                    </tr>
+                </table>
+                <hr>
+                <h6 class="org">ORIGINAL</h6>
+                <h6><U>PASSING CHALLAN</U></h6>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-8">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Customer:-</span>
+                            <input type="text" class="form-control" placeholder="Enter Customer Name">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Challan No:-</span>
+                            <input type="text" class="form-control" placeholder="Challan No">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Date:-</span>
+                            <input type="date" class="form-control" placeholder="Challan. Date">
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col">Sr. No</th>
+                            <th scope="col">Part No.</th>
+                            <th scope="col" class="text-end">Qty</th>
+                            <th scope="col" class="text-end">Party Name</th>
+                            <th scope="col" class="NoPrint">
+                                <button type="button" class="btn btn-sm btn-success" onclick="BtnAdd()">+</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="TBody">
+                        <tr id="TRow" class="d-none">
+                            <th scope="row">1</th>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="number" class="form-control text-end" name="party_name"
+                                    onchange="Calc(this);">
+                            </td>
+                            <td><input type="text" class="form-control text-end" name="qty" onchange="Calc(this);">
+                            </td>
+                            <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger"
+                                    onclick="BtnDel(this)">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-8">
+                        <button type="button" class="btn btn-primary" onclick="GetPrint()">Print</button>
+                    </div>
+                    <div class="col-4">
+                        <div>
+                            <p class="form-control"><u>Remarks:</u></p>
+                        </div>
+                        <div>
+                            <p class="form-control"><u>Vendor Sign:</u></p>
+                            <p class="form-control"><u>Recived Sign:</u></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><hr>
+    <!----------------------------------------------------NEXT PAGE--------------------------------------------------------------------------------->
+    <div id="container" value="" class="container ">
+        <hr>
+        <div class="card">
+            <div class="card-header text-center">
+                <h4>SHRI RAM METAL</h4>
+                <hr>
+                <table>
+                    <tr>
+                        <th class="add" class="form-control">P-47 SHADE NO-1, VISHVAKARMA INST. ESTATE, CHITRA GIDC</th>
+                    </tr>
+                </table>
+                <hr>
+                <table>
+                    <tr>
+                        <th class="add" class="form-control">BHAVNAGAR, 364004, 9974319060</th>
+                    </tr>
+                </table>
+                <hr>
+                <h6 class="org">DUPLICATE</h6>
+                <h6><U>PASSING CHALLAN</U></h6>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-8">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Customer:-</span>
+                            <input type="text" class="form-control" placeholder="Enter Customer Name">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Challan No:-</span>
+                            <input type="text" class="form-control" placeholder="Challan No">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Date:-</span>
+                            <input type="date" class="form-control" placeholder="Challan. Date">
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col">Sr. No</th>
+                            <th scope="col">Part No.</th>
+                            <th scope="col" class="text-end">Qty</th>
+                            <th scope="col" class="text-end">Party Name</th>
+                            <th scope="col" class="NoPrint">
+                                <button type="button" class="btn btn-sm btn-success" onclick="BtnAdded()">+</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="FBody">
+                        <tr id="FRow" class="d-none">
+                            <th scope="row">1</th>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="number" class="form-control text-end" name="party_name"
+                                    onchange="Calc(this);">
+                            </td>
+                            <td><input type="text" class="form-control text-end" name="qty" onchange="Calc(this);">
+                            </td>
+                            <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger"
+                                    onclick="BtnDeled(this)">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-8">
+                        <button type="button" class="btn btn-primary" onclick="GetPrint()">Print</button>
+                    </div>
+                    <div class="col-4">
+                        <div>
+                            <p class="form-control"><u>Remarks:</u></p>
+                        </div>
+                        <div>
+                            <p class="form-control"><u>Vendor Sign:</u></p>
+                            <p class="form-control"><u>Recived Sign:</u></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+</html>

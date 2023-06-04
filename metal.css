@@ -1,0 +1,21 @@
+.org {
+    text-align: right;
+    font-size: 15px;
+}
+
+.add{
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        font-size: 15px;
+    }
+    .row {
+    top: 10px;
+    left: 6px;
+    width: 95%;
+    padding-right: 10px;
+    white-space: nowrap;
+    }
+}
